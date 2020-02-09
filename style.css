@@ -1,3 +1,6 @@
+body{
+    background-color: #474787;
+}
 .form,
 .greetings{
     display: none;
@@ -8,6 +11,7 @@
 }
 
 
+/* background-img */
 
 @keyframes fadeIn{
     from{
@@ -18,7 +22,7 @@
     }
 }
 
-.bgimg{
+.bgImage{
     position: absolute;
     top: 0;
     left: 0;
