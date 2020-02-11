@@ -9,21 +9,33 @@
 <body>
     <div class="wrapper">
         <div class="clockContainer">
+            <select class="js-select">
+                <option value="None">Choose Your Country</option>
+                <option value="FR">France</option>
+                <option value="DE">Germany</option>
+                <option value="JP">Japan</option>
+                <option value="KR">Korea</option>
+                <option value="NL">Netherlands</option>
+                <option value="TW">Taiwan</option>
+                <option value="US">United State</option>
+            </select>
             <div class="js-clock"></div>
         </div>
-        <form class="js-NameForm">
+        <form class="js-NameForm form">
             <input type="text" placeholder="What's Your Name?">
         </form>
-        <div>
-            <h4 class="js-greeting greeting"></h4>
-        </div>
+        <h3 class="js-greeting greeting"></h3>
 
         <form class="js-toDoForm">
             <input type="text" placeholder="Write to do list">
         </form>
         <ul class="js-toDoList"></ul>
+        <div class="weatherContainer">
+            <h4 class="js-weather"></h4>
+        </div>
 
     </div>
+   
     <script src="clock.js"></script>
     <script src="user.js"></script>
     <script src="todo.js"></script>

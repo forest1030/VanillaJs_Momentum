@@ -1,32 +1,32 @@
-const form = document.querySelector('.js-NameForm'),
-    input = form.querySelector("input"),
-    greeting = document.querySelector(".js-greeting");
+const nameForm = document.querySelector(".js-NameForm");
+const nameInput = nameForm.querySelector("input");
+const greeting = document.querySelector(".js-greeting");
 
-const user_local = "currentUser",
-    showing_class = "showing";
-
+const USER_LS = "currentUser";
+const SHOWING = "showing";
 
 
 function saveName(text){
-    localStorage.setItem(user_local, text);
+    localStorage.setItem(USER_LS,text);
 }
 
 function handleSubmit(event){
-    event.preventDefault(); 
-    const currentValue = input.value;
+    event.preventDefault();
+    const currentValue = nameInput.value;
     paintName(currentValue);
     saveName(currentValue);
 }
 
 function askForName(){
-    form.classList.add(showing_class);
-    form.addEventListener("submit", handleSubmit);
+    nameForm.classList.add(SHOWING)
+    nameForm.addEventListener("submit",handleSubmit);
 }
 
-function paintName(text){
-    form.classList.remove(showing_class);
-    greeting.classList.add(showing_class);
 
+
+function paintName(text){
+    nameForm.classList.remove(SHOWING);
+    greeting.classList.add(SHOWING);
     const date = new Date();
     const hour = date.getHours();
 
@@ -42,19 +42,20 @@ function paintName(text){
     else {
         greeting.innerText = `Yo! ${text}`
     }
-
 }
 
 function loadName(){
-    const currentUser = localStorage.getItem(user_local);
-    if (currentUser === null){  
+    const currentUser = localStorage.getItem(USER_LS);
+    if (currentUser === null){
         askForName();
-    }
-    else{  
+    } 
+    else {
         paintName(currentUser);
     }
 }
+
 function init(){
     loadName();
 }
+
 init();

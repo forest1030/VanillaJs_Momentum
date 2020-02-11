@@ -1,8 +1,9 @@
 body{
     background-color: #474787;
+    color: #fff;
 }
 .form,
-.greetings{
+.greeting{
     display: none;
 }
 
