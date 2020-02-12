@@ -5,19 +5,18 @@ const COORDS = "coords";
 
 function getWeather(lat, lon) {
     
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
-      .then(function(response) {
-        return response.json();
+  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`)
+    .then(function(response) {
+      return response.json();
         
-      })
-      .then(function(json) {
+    })
+    .then(function(json) {
         
-        const temperature = json.main.temp;
-        const place = json.name;
-  
-  
-        weather.innerText = `${temperature}°@ ${place}`;
-      })
+      const temperature = json.main.temp;
+      const place = json.name;
+
+      weather.innerText = `${temperature}@  ${place}`;
+    })
   };
   
   // Store geo data in local storage

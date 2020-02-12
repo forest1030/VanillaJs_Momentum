@@ -1,17 +1,48 @@
 body{
     background-color: #474787;
     color: #fff;
+    text-align:  center;
+    margin: auto; 
+    font-family: 'Aclonica', sans-serif;
+}
+
+.wrapper{
+    /* margin-top: 50%;
+    margin-bottom: 50%; */
+    margin-top: 230px;
 }
 .form,
 .greeting{
     display: none;
+    font-size: 30px;
 }
 
 .showing{
     display: block;
 }
 
+.clock {
+    font-size: 120px;
+}
+li{
+    font-size: 30px;
+}
 
+
+input{
+    background-color: transparent;
+    width: 25%;
+    height: 40px;
+    border-right:0px; 
+    border-top:0px; 
+    border-left:0px;
+
+}
+input::placeholder {
+    color:#fff;
+    font-size: 30px;
+    
+}
 /* background-img */
 
 @keyframes fadeIn{
